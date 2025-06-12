@@ -29,14 +29,19 @@ __Step 4:__
 1. Apply the deployment by running the command: `kubectl apply -f nginx-deployment.yml`.
 2. Apply the service by running the command: `kubectl apply -f nginx-service.yml`.
 3. Verify that your application is running smoothly with this command: `minikube service`.
-4. Use `Ctrl + C` to stop the tunnel in order to proceed with the tasks.
+![](images/minikube-service.png)
+5. Use `Ctrl + C` to stop the tunnel in order to proceed with the tasks.
 
 __Step 5:__  
 1. Scale up your deployment with this command: `kubectl scale deployment/nginx-service --replicate=5`.
 2. In performing a rolling update, check your pods to see if there was any increment. Use the command: `kubectl get pods`.
-3. Modify the version of your image in the deployment YAML file.
-4. Apply the deployment again by using the command stated earlier in Step 4 (1).
-5. Monitor the rollouts happening. Check to make sure your new image has been created and running. Use the command `kubectl describe deployment nginx-deployment | grep Image`.
+![](images/get-pods.png)
+4. Modify the version of your image in the deployment YAML file.
+5. Apply the deployment again by using the command stated earlier in Step 4 (1).
+6. Monitor the rollouts happening. Check to make sure your new image has been created and running. Use the command `kubectl describe deployment nginx-deployment | grep Image`.
+![](images/rolling.png)
 
+# Web Result
+![](images/result.png)
 
 
